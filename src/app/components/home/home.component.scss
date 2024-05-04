@@ -1,3 +1,5 @@
+@import '../../styles/shared-styles.scss';
+
 .intro-section {
     text-align: center;
     color: white;
@@ -17,7 +19,7 @@
 
 .search-input {
     width: 300px;
-    background-color: rgb(19, 23, 42);
+    background-color: $shopapp-background-color;
     margin-right: 10px;
     border-color: rgba(255, 255, 255, 0.5);
     color: white;
@@ -29,27 +31,28 @@
 }
 
 .form-control::placeholder {
-    /*Chorme, Firefox, Oprera, Safari 10.1+ */
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgba(255, 255, 255, 0.5);
     opacity: 1;
+    /* Firefox */
 }
 
 .form-control:-ms-input-placeholder {
-    /*Internet Explorer*/
+    /* Internet Explorer 10-11 */
     color: rgba(255, 255, 255, 0.5);
 }
 
 .form-control::-ms-input-placeholder {
-    /*Microsoft Edge*/
+    /* Microsoft Edge */
     color: rgba(255, 255, 255, 0.5);
 }
 
 .product-item {
-    background-color: rgb(19, 23, 42);
+    background-color: $shopapp-background-color;
     border: 1px solid rgb(35, 39, 61);
     border-radius: 20px;
     padding: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .product-image {
@@ -67,7 +70,7 @@
 }
 
 .product-warranty {
-    color: rgb(242, 126, 212);
+    color: $shopapp-tint-color;
 }
 
 .product-price {
@@ -87,4 +90,27 @@
 
 .space-x {
     margin: 0 5px;
+    /*margin-top, margin-right, margin-bottom, margin-left*/
 }
+
+.page-number {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin: 0 2px;
+    border-radius: 3px;
+}
+
+.page-number.active {
+    background-color: $shopapp-color !important;
+    color: #fff;
+    border-color: $shopapp-color !important;
+}
+.btn-primary {
+    background-color: $shopapp-color;
+    border-color: $shopapp-color;    
+}
+.btn.btn-primary {
+    margin-left: 10px;
+}
+  
